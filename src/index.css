@@ -1,0 +1,20 @@
+/* Importando o Tailwind na versão 4 */
+@import "tailwindcss";
+
+/* O nosso CSS Puro continua funcionando normalmente aqui! */
+body {
+  background-color: #121212; 
+  color: #ffffff; 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header-glow {
+  background: linear-gradient(180deg, rgba(109, 40, 217, 0.6) 0%, transparent 100%);
+}
+
+.texto-vazado {
+  color: transparent;
+  -webkit-text-stroke: 3px #9333ea;
+}
