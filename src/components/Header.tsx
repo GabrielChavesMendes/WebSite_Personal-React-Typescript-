@@ -1,24 +1,87 @@
 // src/components/Header.tsx
 
+import { useState } from 'react';
+
+import logoMarca1 from '../assets/DarkLab.png'; 
+import logoMarca2 from '../assets/Growth.png'; 
+
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // 2. NOVO: Criando a lista de patrocinadores e cupons. 
+  const patrocinadores = [
+    { id: 1, tipo: 'imagem', src: logoMarca1, alt: 'Marca 1' },
+    { id: 2, tipo: 'texto', texto: 'CUPOM: LIAN10' },
+    { id: 3, tipo: 'imagem', src: logoMarca2, alt: 'Marca 2' },
+    { id: 4, tipo: 'texto', texto: 'CUPOM: LIAN10' },
+  ];
+
   return (
-    <header className="flex justify-between items-center p-6 header-glow">
+    <header className="flex justify-between items-center p-4 md:p-6 header-glow relative z-50">
       
       {/* Lado Esquerdo: Logo */}
-      <div className="text-2xl font-bold tracking-widest text-white">
+      <div className="text-xl md:text-2xl font-bold tracking-widest text-white whitespace-nowrap">
         LIAN.FIT
       </div>
 
+      <div 
+        className="flex-1 overflow-hidden mx-4 md:mx-8 relative"
+        style={{
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+            maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
+        }}
+      >
+        <div className="animate-marquee flex items-center gap-8 md:gap-16">
+            {[...patrocinadores, ...patrocinadores].map((item, index) => (
+              <div key={index} className="flex items-center flex-shrink-0">
+                {item.tipo === 'imagem' ? (
+                  <img src={item.src} alt={item.alt} className="h-6 md:h-8 md:w-28 object-contain opacity-80" />
+                ) : (
+                  <span className="text-purple-400 font-bold text-sm md:text-base tracking-widest uppercase">
+                    {item.texto}
+                  </span>
+                )}
+              </div>
+            ))}
+
+        </div>
+      </div>
+
+      {/* BOTÃO SANDUÍCHE */}
+      <button 
+        className="md:hidden text-white focus:outline-none flex-shrink-0"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {isMenuOpen ? (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          )}
+        </svg>
+      </button>
+
       {/* Lado Direito: Navegação */}
-      <nav>
-        <ul className="flex gap-8 text-base font-medium text-gray-200">
-          {/* O hover:text-purple-400 faz o texto ficar roxo ao passar o mouse! */}
+      <nav className="hidden md:block">
+        <ul className="flex gap-6 lg:gap-8 text-sm lg:text-base font-medium text-gray-200">
           <li><a href="#inicio" className="hover:text-purple-400 transition-colors">INÍCIO</a></li>
-          <li><a href="#quem-sou-eu" className="hover:text-purple-400 transition-colors">QUEM EU SOU</a></li>
+          <li><a href="#quem-sou-eu" className="hover:text-purple-400 transition-colors">QUEM SOU</a></li>
           <li><a href="#planos" className="hover:text-purple-400 transition-colors">PLANOS</a></li>
+          <li><a href="#consultorias" className="hover:text-purple-400 transition-colors">CONSULTORIA</a></li>
           <li><a href="#contatos" className="hover:text-purple-400 transition-colors">CONTATOS</a></li>
         </ul>
       </nav>
+
+      {/* MENU MOBILE (Aberto) */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#121212]/95 backdrop-blur-md border-b border-purple-900 md:hidden flex flex-col items-center py-8 gap-6 shadow-2xl">
+          <a href="#inicio" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors">INÍCIO</a>
+          <a href="#quem-sou-eu" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors">QUEM SOU</a>
+          <a href="#planos" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors">PLANOS</a>
+          <a href="#consultorias" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors">CONSULTORIA</a>
+          <a href="#contatos" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-gray-200 hover:text-purple-400 transition-colors">CONTATOS</a>
+        </div>
+      )}
 
     </header>
   );

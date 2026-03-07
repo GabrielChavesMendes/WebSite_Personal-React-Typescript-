@@ -5,6 +5,7 @@ import bg_treinando from '../assets/Mulher_treinando.png';
 export function Hero() {
   return (
     <section 
+      id="inicio"
       className="relative w-full h-[90vh] bg-black overflow-hidden z-20"
       style={{
         backgroundImage: `url(${bg_treinando})`,
