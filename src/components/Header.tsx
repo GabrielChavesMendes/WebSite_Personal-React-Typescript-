@@ -35,7 +35,7 @@ export function Header() {
             {[...patrocinadores, ...patrocinadores].map((item, index) => (
               <div key={index} className="flex items-center flex-shrink-0">
                 {item.tipo === 'imagem' ? (
-                  <img src={item.src} alt={item.alt} className="h-6 md:h-8 md:w-28 object-contain opacity-80" />
+                  <img src={item.src} alt={item.alt} className="h-6 w-36 md:h-8 md:w-28 object-contain opacity-80" />
                 ) : (
                   <span className="text-purple-400 font-bold text-sm md:text-base tracking-widest uppercase">
                     {item.texto}
