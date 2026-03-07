@@ -32,7 +32,13 @@ body {
 
 .texto-vazado {
   color: transparent;
-  -webkit-text-stroke: 3px #9333ea;
+  -webkit-text-stroke: 1px #9333ea;
+}
+
+@media (min-width: 768px) {
+  .texto-vazado {
+    -webkit-text-stroke: 3px #9333ea;
+  }
 }
 
 img, video {
