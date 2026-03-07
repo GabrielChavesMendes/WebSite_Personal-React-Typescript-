@@ -1,6 +1,5 @@
 // src/components/QuemSouEu.tsx
 
-//Imagens importadas
 import imgToji from '../assets/Toji.png';
 import imgPersonal from '../assets/Personal.png';
 import waves from '../assets/Wave.png'

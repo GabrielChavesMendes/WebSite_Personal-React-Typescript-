@@ -1,7 +1,10 @@
 // src/App.tsx
 import './index.css'; // Importando nossos estilos globais
-import {Header} from './components/header';
+import {Header} from './components/Header';
 import { QuemSouEu } from './components/QuemSouEU';
+import { Planos } from './components/Planos';
+import { Consultorias } from './components/Consultorias';
+import { Contato } from './components/Contato';
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <main className="flex-grow">
         
         <QuemSouEu />
+        <Planos />
+        <Consultorias />
+        <Contato />
 
       </main>
 
