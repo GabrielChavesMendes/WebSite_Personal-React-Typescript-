@@ -32,7 +32,7 @@ export function Hero() {
           </h1>
           
           {/* Mesma coisa aqui: menor no celular, gigante no PC */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black texto-vazado tracking-tighter leading-tight md:leading-none mb-8 md:mb-12 md:mt-[-20px]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black texto-vazado tracking-normal md:tracking-tighter leading-tight md:leading-none mb-8 md:mb-12 md:mt-[-20px]">
             SEM DESCULPAS. SEM ATALHOS.
           </h1>
           

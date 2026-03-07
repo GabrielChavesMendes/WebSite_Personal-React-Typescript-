@@ -23,7 +23,7 @@ export function QuemSouEu() {
                         QUEM
                     </h2>
 
-                    <h2 className="text-[60px] md:text-[80px] font-black texto-vazado tracking-widest leading-none mt-[-10px] md:mt-[-20px] md:translate-x-10 md:translate-y-5">
+                    <h2 className="text-[60px] md:text-[80px] font-black texto-vazado tracking-normal md:tracking-widest leading-none mt-[-10px] md:mt-[-20px] md:translate-x-10 md:translate-y-5">
                         SOU EU
                     </h2>
                 </div>

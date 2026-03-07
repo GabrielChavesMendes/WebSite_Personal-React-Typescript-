@@ -15,7 +15,7 @@ export function Contato() {
         {/* RESPONSIVO: Adicionado text-center no celular e md:text-left no PC */}
         <div className="mb-10 md:mb-12 text-center md:text-left">
           {/* RESPONSIVO: Fonte menor no mobile e o translate-x só funciona no PC (md:) */}
-          <h2 className="text-5xl sm:text-6xl md:text-[70px] font-black texto-vazado tracking-widest leading-none md:-translate-x-20">
+          <h2 className="text-5xl sm:text-6xl md:text-[70px] font-black texto-vazado tracking-normal md:tracking-widest leading-none md:-translate-x-20">
             CONTATO
           </h2>
         </div>

@@ -32,7 +32,7 @@ body {
 
 .texto-vazado {
   color: transparent;
-  -webkit-text-stroke: 1px #9333ea;
+  -webkit-text-stroke: 2px #9333ea;
 }
 
 @media (min-width: 768px) {

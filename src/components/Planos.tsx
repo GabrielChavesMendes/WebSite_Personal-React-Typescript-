@@ -13,7 +13,7 @@ export function Planos() {
       
       {/* TÍTULO */}
       <div className="max-w-7xl mx-auto px-8 mb-10 md:mb-8 flex justify-center md:justify-end">
-        <h2 className="text-5xl sm:text-6xl md:text-[70px] font-black texto-vazado tracking-widest leading-none mt-[-10px] md:mt-[-20px] md:translate-x-30">
+        <h2 className="text-5xl sm:text-6xl md:text-[70px] font-black texto-vazado tracking-normal md:tracking-widest leading-none mt-[-10px] md:mt-[-20px] md:translate-x-30">
           PLANOS
         </h2>
       </div>
