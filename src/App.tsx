@@ -5,6 +5,7 @@ import { QuemSouEu } from './components/QuemSouEU';
 import { Planos } from './components/Planos';
 import { Consultorias } from './components/Consultorias';
 import { Contato } from './components/Contato';
+import { Hero } from './components/Hero';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
       <main className="flex-grow">
         
+        <Hero />
         <QuemSouEu />
         <Planos />
         <Consultorias />

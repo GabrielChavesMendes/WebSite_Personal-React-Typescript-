@@ -1,6 +1,26 @@
 /* Importando o Tailwind na versão 4 */
 @import "tailwindcss";
 
+/* === REDE DE SEGURANÇA RESPONSIVA === */
+
+/* 1. Impede a rolagem horizontal indesejada no site inteiro */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* 2. Garante que o cálculo de tamanho das caixas inclua as bordas e os paddings (já é padrão em muitos navegadores, mas é bom reforçar) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 3. Garante que nenhuma imagem ou vídeo ultrapasse o tamanho do pai dela */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* O nosso CSS Puro continua funcionando normalmente aqui! */
 body {
   background-color: #121212; 
@@ -17,4 +37,24 @@ body {
 .texto-vazado {
   color: transparent;
   -webkit-text-stroke: 3px #9333ea;
+}
+
+/* === REDE DE SEGURANÇA RESPONSIVA === */
+
+/* 1. Impede a rolagem horizontal indesejada no site inteiro */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* 2. Garante que o cálculo de tamanho das caixas inclua as bordas e os paddings (já é padrão em muitos navegadores, mas é bom reforçar) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 3. Garante que nenhuma imagem ou vídeo ultrapasse o tamanho do pai dela */
+img, video {
+  max-width: 100%;
+  height: auto;
 }
