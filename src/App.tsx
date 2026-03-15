@@ -6,6 +6,7 @@ import { Planos } from './components/Planos';
 import { Consultorias } from './components/Consultorias';
 import { Contato } from './components/Contato';
 import { Hero } from './components/Hero';
+import { FAQ } from './components/Faq';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <QuemSouEu />
         <Planos />
         <Consultorias />
+        <FAQ />
         <Contato />
 
       </main>

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 import logoMarca1 from '../assets/DarkLab.png'; 
-import logoMarca2 from '../assets/Growth.png'; 
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +11,7 @@ export function Header() {
   const patrocinadores = [
     { id: 1, tipo: 'imagem', src: logoMarca1, alt: 'Marca 1' },
     { id: 2, tipo: 'texto', texto: 'CUPOM: LIAN10' },
-    { id: 3, tipo: 'imagem', src: logoMarca2, alt: 'Marca 2' },
+    { id: 3, tipo: 'imagem', src: logoMarca1, alt: 'Marca 2' },
     { id: 4, tipo: 'texto', texto: 'CUPOM: LIAN10' },
   ];
 
