@@ -33,7 +33,7 @@ export function Contato() {
           </h2>
         </div>
 
-        {/* ==================== DIVISÃO DE COLUNAS ==================== */}
+        {/* DIVISÃO DE COLUNAS */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start relative z-10 w-full">
           
           {/* LADO ESQUERDO: Formulário (Mais estreito, ocupando 5 colunas) */}
@@ -142,23 +142,22 @@ export function Contato() {
 
         </div>
 
-        {/* ==================== TOJI ==================== */}
+        {/* TOJI */}
         <div className="mt-16 md:mt-0 md:absolute md:-bottom-20 md:-right-16 lg:-right-32 flex justify-center md:justify-end z-0 pointer-events-none">
           <img 
               src={imgToji}
               alt="Personagem Toji"
-              className="w-full max-w-[180px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain drop-shadow-[0_0_20px_rgba(147,51,234,0.5)] opacity-95"
+              className="w-full max-w-[180px] max-h-[360px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain drop-shadow-[0_0_20px_rgba(147,51,234,0.5)] opacity-95"
           />
         </div>
 
-        {/* Pop-UP (Mantido Intacto) */}
         {isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
             <div className="bg-[#121212] border border-purple-800 rounded-3xl p-8 w-full max-w-xl relative shadow-[0_0_30px_rgba(109,40,217,0.3)] text-left">
               <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-6 text-gray-500 hover:text-white text-3xl font-bold transition-colors">
                 &times;
               </button>
-              <h3 className="text-2xl font-bold text-white mb-6">Comentários do Clã</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Comentários</h3>
               <div className="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-2">
                 <div className="bg-[#1a1a1a] p-5 rounded-xl border border-gray-800">
                   <h4 className="text-purple-400 font-bold text-md">Yuji Itadori</h4>
