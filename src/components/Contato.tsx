@@ -39,18 +39,15 @@ export function Contato() {
           {/* LADO ESQUERDO: Formulário (Mais estreito, ocupando 5 colunas) */}
           <div className="col-span-1 md:col-span-5 flex flex-col gap-10 md:-translate-x-30">
             
-            {/* Caixa de Comentário */}
             <div>
               <h3 className="text-white font-bold text-lg mb-4 text-center md:text-left drop-shadow-md">Deixe um comentário</h3>
               
-              {/* Diminuí a altura para rows={3} e coloquei max-w-lg para não esticar tanto */}
               <textarea 
                 rows={3}
                 placeholder="Escreva aqui..."
                 className="w-full max-w-lg bg-transparent backdrop-blur-sm border border-white/40 rounded-[20px] p-5 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none mb-4"
               ></textarea>
 
-              {/* Botão menor e alinhado à esquerda (w-fit faz ele ter o tamanho exato do texto no PC) */}
               <div className="flex justify-center md:justify-start">
                 <button 
                   onClick={() => setIsModalOpen(true)}
@@ -83,10 +80,8 @@ export function Contato() {
           </div>
 
           {/* MEIO DA TELA: Sobre Mim e Redes Sociais */}
-          {/* md:col-start-7 empurra este bloco diretamente para a coluna 7, ou seja, para o meio da tela! */}
           <div className="col-span-1 md:col-span-4 md:col-start-7 flex flex-col gap-8 text-center md:text-left md:pt-4 md:-translate-x-20">
             
-            {/* Sobre Mim */}
             <div>
               <h3 className="text-white font-bold text-lg mb-3 drop-shadow-md">Sobre mim</h3>
               <p className="text-gray-300 leading-relaxed font-medium drop-shadow-md text-sm md:text-base">
@@ -100,7 +95,6 @@ export function Contato() {
               
               <ul className="flex flex-row flex-wrap justify-center md:justify-start gap-4">
                 
-                {/* Instagram */}
                 <li>
                   <a href="#" className="flex items-center group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -109,7 +103,6 @@ export function Contato() {
                   </a>
                 </li>
 
-                {/* X (Antigo Twitter) */}
                 <li>
                   <a href="#" className="flex items-center group">
                     <div className="w-10 h-10 rounded-xl bg-black border border-gray-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -118,7 +111,6 @@ export function Contato() {
                   </a>
                 </li>
 
-                {/* Facebook */}
                 <li>
                   <a href="#" className="flex items-center group">
                     <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -127,7 +119,6 @@ export function Contato() {
                   </a>
                 </li>
 
-                {/* TikTok */}
                 <li>
                   <a href="#" className="flex items-center group">
                     <div className="w-10 h-10 rounded-xl bg-black border border-gray-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -140,15 +131,6 @@ export function Contato() {
             </div>
           </div>
 
-        </div>
-
-        {/* TOJI */}
-        <div className="mt-16 md:mt-0 md:absolute md:-bottom-20 md:-right-16 lg:-right-32 flex justify-center md:justify-end z-0 pointer-events-none">
-          <img 
-              src={imgToji}
-              alt="Personagem Toji"
-              className="w-full max-w-[180px] max-h-[360px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain drop-shadow-[0_0_20px_rgba(147,51,234,0.5)] opacity-95"
-          />
         </div>
 
         {isModalOpen && (
@@ -177,6 +159,16 @@ export function Contato() {
         )}
 
       </div>
+
+      {/* TOJI */}
+      <div className="mt-16 md:mt-0 flex justify-center md:absolute md:bottom-0 md:right-0 z-0 pointer-events-none">
+        <img 
+            src={imgToji}
+            alt="Personagem Toji"
+            className="w-full max-w-[180px] max-h-[460px] md:max-w-[450px] lg:max-w-[550px] h-auto object-contain drop-shadow-[0_0_20px_rgba(147,51,234,0.5)] opacity-95"
+        />
+      </div>
+
     </section>
   );
 }
