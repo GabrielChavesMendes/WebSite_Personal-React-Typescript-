@@ -56,8 +56,8 @@ img, video {
 
 .animate-marquee {
   display: flex;
-  width: max-content;
-  animation: scroll-banner 17s linear infinite;
+  width: fit-content; 
+  animation: scroll-banner 15s linear infinite;
 }
 
 .animate-marquee:hover {

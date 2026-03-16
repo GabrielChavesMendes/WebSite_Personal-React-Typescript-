@@ -1,9 +1,21 @@
 // src/components/FAQ.tsx
-import { useState } from 'react';
+
+import { useState, useRef } from 'react';
+
 import bgFaq from '../assets/tojiBack.png'; 
+
+// Importando GSAP
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const containerRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   const faqs = [
     {
@@ -28,11 +40,41 @@ export function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%", 
+      }
+    });
+
+    // Título surge de baixo
+    tl.fromTo(titleRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+    )
+    
+    // As perguntas (linhas) surgem em cascata usando a classe .faq-item
+    .fromTo('.faq-item',
+      { y: 30, opacity: 0 },
+      { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.5, 
+        stagger: 0.15, 
+        ease: "power2.out",
+        clearProps: "all" 
+      },
+      "-=0.4"
+    );
+
+  }, { scope: containerRef });
+
   return (
-    <section id="faq" className="relative py-20 w-full overflow-hidden bg-black">
+    <section id="faq" ref={containerRef} className="relative py-20 w-full overflow-hidden bg-black">
       
       <div 
-        className="absolute inset-0 z-0 opacity-50"
+        className="absolute inset-0 z-0 opacity-50 pointer-events-none"
         style={{
           backgroundImage: `url(${bgFaq})`,
           backgroundSize: 'cover',
@@ -45,7 +87,7 @@ export function FAQ() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8">
         
         {/* TÍTULO */}
-        <h2 className="text-[60px] md:text-[80px] font-black text-white text-center mb-12 tracking-widest leading-none drop-shadow-lg">
+        <h2 ref={titleRef} className="text-[60px] md:text-[80px] font-black text-white text-center mb-12 tracking-widest leading-none drop-shadow-lg">
           FAQ
         </h2>
 
@@ -57,11 +99,10 @@ export function FAQ() {
             return (
               <div 
                 key={index} 
-                className="w-full flex flex-col shadow-lg overflow-hidden transition-all duration-300"
+                className="faq-item w-full flex flex-col shadow-lg overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  // Mágica das Cores: Se estiver aberto (isOpen), fica roxo com texto preto. Se fechado, fica branco com texto preto.
                   className={`w-full text-left px-6 py-5 font-bold text-lg md:text-xl transition-colors duration-300 flex justify-between items-center ${
                     isOpen ? 'bg-[#9333ea] text-black' : 'bg-white text-black hover:bg-gray-200'
                   }`}
