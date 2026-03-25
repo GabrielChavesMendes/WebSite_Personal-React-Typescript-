@@ -1,5 +1,3 @@
-// src/components/QuemSouEu.tsx
-
 import { useRef } from 'react';
 import imgPersonal from '../assets/Personal.png';
 import imgTreino1 from '../assets/imagemCarrosel1.png';
@@ -81,7 +79,7 @@ export function QuemSouEu() {
 
                     <div ref={textRef} className="text-gray-200 text-lg md:text-xl leading-relaxed text-justify md:text-left font-medium z-10 max-w-2xl">
                         <p>
-                            Sou Lian Malheiros e meu objetivo é simples: entregar resultados reais através de um treino inteligente. 
+                            Sou um Personal Trainer e meu objetivo é simples: entregar resultados reais através de um treino inteligente. 
                             Esqueça as fichas genéricas; meu foco é a biomecânica aplicada à sua realidade e aos seus objetivos.
                         </p>
                         <p className="mt-6">

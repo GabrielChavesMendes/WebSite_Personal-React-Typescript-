@@ -1,5 +1,3 @@
-// src/components/Hero.tsx
-
 import { useRef } from 'react';
 import bg_treinando from '../assets/Mulher_treinando.png';
 

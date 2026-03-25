@@ -1,4 +1,3 @@
-// src/App.tsx
 import './index.css'; // Importando nossos estilos globais
 import {Header} from './components/Header';
 import { QuemSouEu } from './components/QuemSouEU';
@@ -7,6 +6,7 @@ import { Consultorias } from './components/Consultorias';
 import { Contato } from './components/Contato';
 import { Hero } from './components/Hero';
 import { FAQ } from './components/Faq';
+import { Rodape } from './components/Rodape';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Consultorias />
         <FAQ />
         <Contato />
+        <Rodape />
 
       </main>
 

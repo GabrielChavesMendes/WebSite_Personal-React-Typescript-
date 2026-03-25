@@ -1,5 +1,3 @@
-// src/components/Planos.tsx
-
 import { useRef } from 'react';
 import bgBasic from '../assets/Basic.png';
 import bgPlus from '../assets/Plus.png';

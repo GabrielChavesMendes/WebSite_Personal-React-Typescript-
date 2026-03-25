@@ -1,5 +1,3 @@
-// src/components/Header.tsx
-
 import { useState } from 'react';
 import logoMarca1 from '../assets/DarkLab.png'; 
 
@@ -8,9 +6,9 @@ export function Header() {
 
   const patrocinadores = [
     { id: 1, tipo: 'imagem', src: logoMarca1, alt: 'Marca 1' },
-    { id: 2, tipo: 'texto', texto: 'CUPOM: LIAN10' },
+    { id: 2, tipo: 'texto', texto: 'CUPOM: PERSONAL10' },
     { id: 3, tipo: 'imagem', src: logoMarca1, alt: 'Marca 2' },
-    { id: 4, tipo: 'texto', texto: 'CUPOM: LIAN10' },
+    { id: 4, tipo: 'texto', texto: 'CUPOM: PERSONAL10' },
   ];
 
   return (
@@ -18,7 +16,7 @@ export function Header() {
       
       {/* Lado Esquerdo: Logo */}
       <div className="text-xl md:text-2xl font-bold tracking-widest text-white whitespace-nowrap flex-shrink-0 z-10 relative bg-black/50 md:bg-transparent px-2 rounded-lg">
-        LIAN.FIT
+        PERSONAL.FIT
       </div>
 
       {/* BANNER DINÂMICO DE PATROCINADORES */}

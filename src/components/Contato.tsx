@@ -1,5 +1,3 @@
-// src/components/Contato.tsx
-
 import { useState, useRef } from 'react';
 
 // IMPORTANDO AS IMAGENS
@@ -108,7 +106,7 @@ export function Contato() {
                     <li className="flex items-center gap-3 text-white font-medium">
                     <span className="text-xl drop-shadow-md">📧</span> 
                     <a href="mailto:lianmalheirospersonal@gmail.com" className="hover:text-purple-400 transition-colors drop-shadow-md">
-                        lianmalheirospersonal@gmail.com
+                        personal@gmail.com
                     </a>
                     </li>
                     <li className="flex items-center gap-3 text-white font-medium">

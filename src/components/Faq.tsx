@@ -1,7 +1,4 @@
-// src/components/FAQ.tsx
-
 import { useState, useRef } from 'react';
-
 import bgFaq from '../assets/tojiBack.png'; 
 
 // Importando GSAP
@@ -48,13 +45,11 @@ export function FAQ() {
       }
     });
 
-    // Título surge de baixo
     tl.fromTo(titleRef.current,
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
     )
     
-    // As perguntas (linhas) surgem em cascata usando a classe .faq-item
     .fromTo('.faq-item',
       { y: 30, opacity: 0 },
       { 

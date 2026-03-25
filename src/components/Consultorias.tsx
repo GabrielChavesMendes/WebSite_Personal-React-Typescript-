@@ -1,7 +1,4 @@
-// src/components/Consultorias.tsx
-
 import { useRef } from 'react';
-
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
